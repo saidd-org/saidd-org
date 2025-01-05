@@ -1,0 +1,329 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Roboto", sans-serif; 
+    box-sizing: border-box;
+}
+
+.FContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    z-index: 9999;
+    position: fixed;
+}
+
+.wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 20px;
+    padding: 15px;
+    width: 100%;
+    height: 80px;
+    background-color: #222;
+    box-shadow: 0 7px 15px 0 rgba(0, 0, 0, 0.5);
+}
+
+.brand {
+    display: flex;
+    flex-direction: row;
+    font-size: 1.5em;
+    padding: 15px;
+    text-transform: capitalize;
+}
+
+.firstname {
+    color: white;
+    font-weight: 700;
+
+}
+
+.lastname {
+    color: crimson;
+    font-weight: 400;
+    padding-left: 2px;
+
+}
+
+.navigation {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navigation > li {
+    list-style-type: none;
+    padding: 15px;
+}   
+
+.navigation>li>a {
+    color: white;
+    font-size: 20px;
+    text-decoration: none;
+    text-transform: capitalize;
+}
+
+
+.navigation>li>a:hover {
+    color: crimson;
+    transition: all .3s ease-in-out;
+}
+
+.navigation>li>img {
+    width: 90px;
+    height: 90px;
+    padding: 20px;
+    border-radius: 90px;
+}
+
+.navigation>li>img:hover {
+    width: 95px;
+    height: 95px;
+    border-radius: 95px;
+    transition: all .2s ease-in-out;
+}
+
+
+.beranda {
+    width: 100%;
+    height: default;
+    background-color: lightslategray;
+}
+
+.beranda>center>h1 {
+    color: black;
+}
+
+.beranda>center>p {
+    color: white;
+}
+
+.langkah {
+    padding: 15px;
+}
+
+.beranda1 {
+    padding: 15px;
+}
+
+footer {
+    background-color: black;
+}
+
+.FooterConteiner {
+    width: 100%; 
+    padding: 70px 30px 20px;
+}
+
+.sosialicon {
+    display: flex;
+    justify-content: center;
+
+}
+
+.sosialicon>a {
+    text-decoration: none;
+    padding: 10px;
+    background-color: white;
+    margin: 10px;
+    border-radius: 50%;
+}
+
+.sosialicon>a>i {
+    font-size: 2em;
+    color: black;
+    opacity: 0.9;
+}
+
+.sosialicon>a:hover {
+    background-color: #111;
+    transition: 0.5s;
+}
+
+.sosialicon>a>i:hover {
+    color: white;
+    transition: 0.5s;
+}
+
+.footernav {
+    margin: 30px 0;
+}
+
+.footernav>ul {
+    display: flex;
+    justify-content: center;
+}
+
+.footernav>ul>li>a {
+    color: white;
+    margin: 20px;
+    text-decoration: none;
+    font-size: 1.3em;
+    opacity: 0.7;
+    transition: 0.5s;
+}
+
+.footernav>ul>li>a:hover {
+    opacity: 1;
+}
+
+.footerbottom {
+    background-color: #000;
+    padding: 20px;
+    text-align: center;
+
+}
+
+.footerbottom>p {
+    color: white;
+
+}
+
+.designer {
+    opacity: 0.7;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 400;
+    margin: 0px 5px;
+}
+
+@media (max-widht: 700px) {
+    .footernav>ul {
+        flex-direction: column;
+    }
+    .footernav>ul>li {
+        width: 100%;
+        text-align: center;
+        margin: 10px;
+    }
+
+
+
+}
+
+.transaction-container {
+    background-color: rgb(248, 245, 245);
+    width: 500px;
+    padding: 30px;
+    margin-left: 450px;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+.transaction-container h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.transaction-container form {
+    display: flex;
+    flex-direction: column;
+}
+
+.transaction-container label {
+    margin-bottom: 5px;
+    color: #555;
+    font-weight: bold;
+}
+
+.transaction-container input[type="text"],
+.transaction-container input[type="date"],
+.transaction-container input[type="number"],
+.transaction-container select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.transaction-container button {
+    background-color: #00A8CC;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 12px;
+    font-size: 16px;
+    cursor: pointer;
+    text-align: center;
+}
+
+.transaction-container button:hover {
+    background-color: #008bb2;
+}
+
+
+@media (max-widht: 768px) {
+    .FContainer .wrapper .brand .firstname .lastname .navigation  {
+        display: none;
+    }
+}
+
+.login-container {
+    background-color: rgb(250, 247, 247);
+    width: 400px;
+    padding: 30px;
+    margin-left: 500px;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+  }
+
+  .login-container h2 {
+    margin-bottom: 10px;
+    color: #333;
+  }
+
+  .login-container p {
+    margin-bottom: 20px;
+    color: #555;
+    font-size: 14px;
+  }
+
+  .login-container input[type="text"],
+  .login-container input[type="password"] {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+  }
+
+  .login-container button {
+    background-color: #00A8CC;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 12px;
+    width: 100%;
+    font-size: 16px;
+    cursor: pointer;
+  }
+
+  .login-container button:hover {
+    background-color: #da0505;
+  }
+
+  .login-container .forgot-password {
+    margin-top: 15px;
+  }
+
+  .login-container .forgot-password a {
+    color: #3b07f5;
+    text-decoration: none;
+  }
+
+  .login-container .forgot-password a:hover {
+    text-decoration: underline;
+  }

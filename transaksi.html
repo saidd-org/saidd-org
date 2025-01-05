@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" 
+    integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" 
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>UAS</title>
+</head>
+<body>
+    <header class="FContainer">
+        <nav class="wrapper">
+            <div class="brand">
+                <div class="firstname">said</div>
+                <div class="lastname">luthfi</div>
+            </div>
+            <ul class="navigation">
+                <li><a href="index.html.html">beranda</a></li>
+                <li><a href="transaksi.html">transaksi</a></li>
+                <li><a href="profil.html">profil</a></li>
+                <li><a href="login.html">login</a></li>
+                <li><img src="Desain tanpa judul (1).png" alt=""></li>
+            </ul>
+        </nav>
+    </header><br>
+    <div class="transaction-container" style="margin-top: 8rem; margin-bottom: 8rem;">
+        <h2>Transaksi SaidStore</h2>
+        <form id="transaksi-form" method="">
+            <label for="nama">Nama Pelanggan</label>
+            <input type="text" id="nama" name="nama" placeholder="Masukkan nama pelanggan">
+
+            <label for="tipe-celana">Celana</label>
+            <select id="tipe-celana" name="tipe-celana">
+                <option value="" disabled="" selected="">Pilih celana</option>
+                <option value="jeans">Celana jeans</option>
+                <option value="gunung">celana gunung</option>
+                <option value="olahraga">Celana olahraga</option>
+                <option value="pendek">Celana pendek</option>
+                <option value="panjang">Celana panjang</option>
+            </select>
+
+            <label for="biaya">Total Biaya (Rp)</label>
+            <input type="number" id="biaya" name="biaya" placeholder="Masukkan total biaya">
+
+            <button type="submit">Selesaikan Transaksi</button>
+        </form><br>
+        <div class="footer">
+            © 2025 SaidStore. Semua hak dilindungi.
+        </div>
+    </div>
+    <script>
+        // const nama = document.getElementById('nama');
+        // const type = document.getElementById('tipe-mobil');
+        // const sewa = document.getElementById('tanggal-sewa');
+        // const kembali = document.getElementById('tanggal-kembali');
+        // const biaya = document.getElementById('biaya');
+        // document.getElementById('transaksi-form').addEventListener('submit', function (e) {
+        //     e.preventDefault();
+
+        // });
+        document.getElementById('transaksi-form').addEventListener('submit', function (e) {
+            e.preventDefault();
+
+            // Ambil elemen input
+            const nama = document.getElementById('nama');
+            const tipeMobil = document.getElementById('tipe-mobil');
+            const tanggalSewa = document.getElementById('tanggal-sewa');
+            const tanggalKembali = document.getElementById('tanggal-kembali');
+            const biaya = document.getElementById('biaya');
+
+            // Reset pesan kesalahan sebelumnya
+            const errorElements = document.querySelectorAll('.error-message');
+            errorElements.forEach(element => element.remove());
+
+            // Validasi input
+            let isValid = true;
+
+            if (!nama.value.trim()) {
+                showError(nama, 'Nama pelanggan harus diisi.');
+                isValid = false;
+            }
+
+            if (!tipeMobil.value) {
+                showError(tipeMobil, 'Tipe mobil harus dipilih.');
+                isValid = false;
+            }
+
+            if (!tanggalSewa.value) {
+                showError(tanggalSewa, 'Tanggal sewa harus diisi.');
+                isValid = false;
+            }
+
+            if (!tanggalKembali.value) {
+                showError(tanggalKembali, 'Tanggal kembali harus diisi.');
+                isValid = false;
+            }
+
+            if (!biaya.value.trim() || isNaN(biaya.value) || biaya.value <= 0) {
+                showError(biaya, 'Total biaya harus diisi dengan angka yang valid.');
+                isValid = false;
+            }
+
+            // Jika validasi berhasil, kirim formulir
+            if (isValid) {
+                alert('Formulir berhasil di simpan!');
+                this.submit(); // Lanjutkan pengiriman formulir
+            }
+        });
+
+        // Fungsi untuk menampilkan pesan kesalahan
+        function showError(input, message) {
+            const errorMessage = document.createElement('div');
+            errorMessage.className = 'error-message';
+            errorMessage.style.color = 'red';
+            errorMessage.style.fontSize = '12px';
+            errorMessage.textContent = message;
+            input.parentElement.appendChild(errorMessage);
+        }
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <footer>
+        <div class="FooterConteiner">
+            <div class="sosialicon">
+                <a href=""><i class="fa-brands fa-facebook"></i></a>
+                <a href=""><i class="fa-brands fa-instagram"></i></a>
+                <a href=""><i class="fa-brands fa-whatsapp"></i></a>
+                <a href=""><i class="fa-brands fa-youtube"></i></a>
+            </div>
+            <div class="footernav">
+                <ul>
+                    <li><a href="index.html">Beranda</a></li>
+                    <li><a href="transaksi.html">Transaksi</a></li>
+                    <li><a href="profil.html">Profil</a></li>
+                    <li><a href="login.html">Login</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footerbottom">
+            <p>Copyright &copy;2025; Designed by <span class="designer">Said</span></p>
+        </div>
+    </footer>
+   
+</body>
+</html>
